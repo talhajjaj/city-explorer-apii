@@ -22,7 +22,7 @@ res.status(200).send('server is working'))
 server.get('/weatherInfo',(req,res)=>{
     
     let cityInfo=weather.find( city=>{
-        if(req.query.cityName==city.cityName){
+        if(req.query.searchData.toLowerCase()==city.city_name.toLowerCase()){
             return city
         }
         
